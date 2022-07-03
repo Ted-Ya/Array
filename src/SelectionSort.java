@@ -21,13 +21,20 @@ public class SelectionSort {
       }
 
       //first time arrange : 0~n-1
-      //sec time arrange : 1~ n-2
+      //sec time arrange : 1~ n-1
       for(int i=0;i< arr.length;i++){
-          for(int j =i;j-1>=0&&j<arr.length;j--){
-              if(arr[j-1]>arr[j]){
-                  swap(arr,j-1,j);
-              }
-          }
+
+          // the index of the minor value
+          int minIndex = i;
+            for(int j= i+1;j< arr.length;j++){ //find the minor value index
+                minIndex = arr[j] < arr[minIndex] ? j:minIndex;
+            }
+            swap(arr,i,minIndex);
+//          for(int j =i;j-1>=0&&j<arr.length;j--){
+//              if(arr[j-1]>arr[j]){
+//                  swap(arr,j-1,j);
+//              }
+//          }
       }
     }
 
