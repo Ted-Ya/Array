@@ -29,6 +29,8 @@ public class SelectionSort {
             for(int j= i+1;j< arr.length;j++){ //find the minor value index
                 minIndex = arr[j] < arr[minIndex] ? j:minIndex;
             }
+
+            // after found the minor value occur element exchanges
             swap(arr,i,minIndex);
 //          for(int j =i;j-1>=0&&j<arr.length;j--){
 //              if(arr[j-1]>arr[j]){
