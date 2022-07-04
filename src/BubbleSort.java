@@ -27,8 +27,12 @@ public class BubbleSort {
     }
 
     private static void swap(int[] arr,int indexX, int indexY){
-        int temp = arr[indexX];
-        arr[indexX] = arr[indexY];
-        arr[indexY] = temp;
+//        int temp = arr[indexX];
+//        arr[indexX] = arr[indexY];
+//        arr[indexY] = temp;
+
+        arr[indexX] = arr[indexX]^arr[indexY];
+        arr[indexY] = arr[indexX]^arr[indexY];
+        arr[indexX] = arr[indexX]^arr[indexY];
     }
 }
