@@ -11,7 +11,7 @@ public class BubbleSort {
         System.out.println(Arrays.toString(arr));
     }
 
-
+      // 每次一次排序都将最大的数放到最后一个位置
     private static void bubbleSort(int[] arr){
         if(arr == null || arr.length <2){
             return;
